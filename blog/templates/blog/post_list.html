@@ -1,8 +1,16 @@
 <!doctype html>
 <html>
-    <head>
+    <header>
         <title>Dvidbruhm's blog</title>
-    </head>
+    </header>
+
+    {% for post in posts %}
+    <article>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+    {% endfor %}
     <body>
         <p>Hi there!</p>
         <p>It works!</p>
