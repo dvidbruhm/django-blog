@@ -1,18 +1,45 @@
+{% load static %}
 <!doctype html>
 <html>
-    <header>
+    <head>
         <title>Dvidbruhm's blog</title>
-    </header>
+        <!-- <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+        /> -->
+        <!-- <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+        /> -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/spectre.css/dist/spectre.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css"
+        />
 
-    {% for post in posts %}
-    <article>
-        <time>published: {{ post.published_date }}</time>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </article>
-    {% endfor %}
+        <!-- <link
+            rel="stylesheet"
+            href="https://sitetransform.github.io/sitetransform.css/dist/sitetransform.min.css"
+        /> -->
+
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+    </head>
+
     <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
+        {% for post in posts %}
+        <article>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p><time>{{ post.published_date }}</time></p>
+
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+        {% endfor %}
     </body>
 </html>
