@@ -1,0 +1,47 @@
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <title>Dvidbruhm's blog</title>
+        <!-- <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+        /> -->
+        <!-- <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+        /> -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/spectre.css/dist/spectre.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css"
+        />
+
+        <!-- <link
+            rel="stylesheet"
+            href="https://sitetransform.github.io/sitetransform.css/dist/sitetransform.min.css"
+        /> -->
+
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <h1><a href="/" class="header">Dvidbruhm's blog</a></h1>
+            </div>
+        </header>
+        <main class="container">
+            <div class="row">
+                <div class="col">{% block content %} {% endblock %}</div>
+            </div>
+        </main>
+    </body>
+</html>
